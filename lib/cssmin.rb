@@ -93,7 +93,7 @@ module CSSMin
 
     # Compress color hex values, making sure not to touch values used in IE
     # filters, since they would break.
-    css.gsub!(/([^"'=\s])(\s?)\s*#([0-9a-f])\3([0-9a-f])\4([0-9a-f])\5/i, '\1\2#\3\4\5')
+    css.gsub!(/([^"'=\s])\s*#([0-9a-f])\2([0-9a-f])\3([0-9a-f])\4/i, '\1 #\2\3\4')
 
     # Remove empty rules.
     css.gsub!(/[^\}]+\{;\}\n/, '')
