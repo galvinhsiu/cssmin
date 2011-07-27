@@ -7,8 +7,7 @@ Gem::Specification.new do |s|
   s.homepage = 'http://github.com/rgrove/cssmin/'
   s.platform = Gem::Platform::RUBY
   s.summary  = 'Ruby library for minifying CSS.'
-  s.files        = FileList['{lib}/**/*', 'HISTORY', 'LICENSE'].to_a
-  s.require_path = 'lib'
+  s.files        = Dir['lib/**/*', 'HISTORY', 'LICENSE']
   s.has_rdoc     = false
   s.required_ruby_version = '>= 1.8.6'
 end
